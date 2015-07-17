@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.BarChart?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+      <VBox prefHeight="501.0" prefWidth="960.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                    <Label text="Тип заявителя: ">
+                        <font>
+                            <Font name="Verdana" size="19.0" />
+                        </font>
+                    </Label>
+                  <ComboBox fx:id="comboBox" prefWidth="150.0" >
+
+                  </ComboBox>
+               </children>
+            </HBox>
+              <!-- Таблица -->
+              <TableView fx:id="table" prefHeight="324.0" prefWidth="910.0">
+                  <columns>
+                      <!-- Колонки таблицы -->
+                      <TableColumn fx:id="numberColumn" prefWidth="20.0" text="№" />
+                      <TableColumn fx:id="dateColumn" prefWidth="100.0" text="Дата" />
+                      <TableColumn fx:id="codeFormColumn" prefWidth="100.0" text="Код формы" />
+                      <TableColumn fx:id="statusColumn" prefWidth="70.0" text="Статус" />
+      
+                      <TableColumn fx:id="fullNameColumn" prefWidth="220.0" text="ФИО" />
+                      <TableColumn fx:id="typeColumn" prefWidth="100.0" text="Тип" />
+                      <TableColumn fx:id="serviceColumn" prefWidth="100.0" text="Услуга" />
+                      <TableColumn fx:id="subserviceColumn" prefWidth="100.0" text="Подуслуга" />
+                      <TableColumn fx:id="departmentColumn" prefWidth="100.0" text="Ведомство" />
+                  </columns>
+              </TableView>
+            <BarChart fx:id="barChart">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+         </children>
+      </VBox>
+
+
+
+    </children>
+</AnchorPane>
